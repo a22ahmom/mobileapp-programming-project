@@ -1,0 +1,79 @@
+[{
+  "ID": "wild_animals_crocodile",
+  "name": "Crocodile",
+  "type": "a22ahmom",
+  "company": "",
+  "location": "India",
+  "category": "Reptilia",
+  "size": 0,
+  "cost": 0,
+  "auxdata": {
+    "wiki": "https://en.wikipedia.org/wiki/Crocodile",
+    "img": "https://en.wikipedia.org/wiki/Crocodile#/media/File:Nile_crocodile_head.jpg"
+  }
+}, {
+  "ID": "wild_animals_lion",
+  "name": "Lion",
+  "type": "a22ahmom",
+  "company": "",
+  "location": "Tanzania",
+  "category": "Mammalia",
+  "size": 0,
+  "cost": 0,
+  "auxdata": {
+    "wiki": "https://en.wikipedia.org/wiki/Lion",
+    "img": "https://en.wikipedia.org/wiki/Lion#/media/File:Lion_waiting_in_Namibia.jpg"
+  }
+}, {
+  "ID": "wild_animals_mosquito",
+  "name": "Mosquito",
+  "type": "a22ahmom",
+  "company": "",
+  "location": "East Africa",
+  "category": "Insecta",
+  "size": 0,
+  "cost": 0,
+  "auxdata": {
+    "wiki": "https://en.wikipedia.org/wiki/Mosquito",
+    "img": "https://en.wikipedia.org/wiki/Mosquito#/media/File:Mosquito_2007-2.jpg"
+  }
+}, {
+  "ID": "wild_animals_shark",
+  "name": "Shark",
+  "type": "a22ahmom",
+  "company": "",
+  "location": "Australia ",
+  "category": "Chondrichthyes",
+  "size": 0,
+  "cost": 0,
+  "auxdata": {
+    "wiki": "https://en.wikipedia.org/wiki/Shark",
+    "img": "https://en.wikipedia.org/wiki/Shark#/media/File:TDpGUipa.jpg"
+  }
+}, {
+  "ID": "wild_animals_snake",
+  "name": "Indian cobra",
+  "type": "a22ahmom",
+  "company": "",
+  "location": "Mexico\t",
+  "category": "Reptilia",
+  "size": 0,
+  "cost": 0,
+  "auxdata": {
+    "wiki": "https://en.wikipedia.org/wiki/Indian_cobra",
+    "img": "https://en.wikipedia.org/wiki/Indian_cobra#/media/File:Cobra_hood.jpg"
+  }
+}, {
+  "ID": "wild_animals_wolf",
+  "name": "Wolf",
+  "type": "a22ahmom",
+  "company": "",
+  "location": "Alaska",
+  "category": "Mammalia",
+  "size": 0,
+  "cost": 0,
+  "auxdata": {
+    "wiki": "https://en.wikipedia.org/wiki/Wolf",
+    "img": "https://en.wikipedia.org/wiki/Wolf#/media/File:Eurasian_wolf_2.jpg"
+  }
+}]
