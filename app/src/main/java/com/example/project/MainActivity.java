@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<WildAnimals>>(){}.getType();
         ArrayList<WildAnimals> wildAnimalsArrayList = gson.fromJson(json, type);
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(wildAnimalsArrayList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
     }
 }
 
