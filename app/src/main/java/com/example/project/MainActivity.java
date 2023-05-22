@@ -56,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(wildAnimalsArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+        for(int i = 0; i < wildAnimalsArrayList.size(); i++) {
+            Log.d("Mainactivity ==>", "Hittade ett berg " + wildAnimalsArrayList.get(i).getName());
+        }
     }
 }
 
