@@ -3,4 +3,6 @@
     <string name="nameText">name</string>
     <string name="home">Home</string>
     <string name="about">About</string>
+    <string name="action_internal_web">Internal Web Page</string>
+    <string name="internal_web_page">Internal Web Page</string>
 </resources>

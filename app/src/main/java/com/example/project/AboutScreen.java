@@ -1,8 +1,11 @@
 package com.example.project;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -20,7 +23,10 @@ public class AboutScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
         TextView textView = findViewById(R.id.textview);
+
         webView = findViewById(R.id.webview);
+        webView.setWebViewClient(new WebViewClient());
+        webView.getSettings().setJavaScriptEnabled(true);
 
         Bundle extras = getIntent().getExtras();
         if(extras != null){
@@ -35,5 +41,21 @@ public class AboutScreen extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.action_internal_web) {
+            Log.d("==>","Will display internal web page");
+            showInternalWebPage();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
