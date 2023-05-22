@@ -20,6 +20,7 @@ import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener{
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22ahmom";
+    private final String JSON_FILE = "wildanimals.json";
     private ArrayList<WildAnimals> wildAnimalsArrayList;
     RecyclerView recyclerView;
     private String readFile(String fileName) {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     }
 
     @SuppressLint("NotifyDataSetChanged")
+    @Override
     public void onPostExecute(String json) {
         Log.d("Mainactivity ==>", json);
 
@@ -63,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         adapter.notifyDataSetChanged();
 
         for(int i = 0; i < wildAnimalsArrayList.size(); i++) {
-            Log.d("Mainactivity ==>", "Hittade ett berg " + wildAnimalsArrayList.get(i).getName());
+            Log.d("Mainactivity ==>", "Hittade ett vilt djur " + wildAnimalsArrayList.get(i).getName());
         }
     }
 }
