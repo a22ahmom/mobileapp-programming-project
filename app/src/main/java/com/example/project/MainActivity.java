@@ -49,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("NotifyDataSetChanged")
     public void onPostExecute(String json) {
         Log.d("Mainactivity ==>", json);
+
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<WildAnimals>>(){}.getType();
+        ArrayList<WildAnimals> wildAnimalsArrayList = gson.fromJson(json, type);
     }
 }
 
