@@ -9,10 +9,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22ahmom";
+    private ArrayList<WildAnimals> wildAnimalsArrayList;
     RecyclerView recyclerView;
     private String readFile(String fileName) {
         try {
