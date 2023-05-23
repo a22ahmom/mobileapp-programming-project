@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
     private final String JSON_FILE = "wildanimals.json";
     private ArrayList<WildAnimals> wildAnimalsArrayList;
     RecyclerView recyclerView;
-
     private String readFile(String fileName) {
         try {
             //noinspection CharsetObjectCanBeUsed
@@ -72,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Type type = new TypeToken<ArrayList<WildAnimals>>(){}.getType();
         ArrayList<WildAnimals> wildAnimalsArrayList = gson.fromJson(json, type);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(wildAnimalsArrayList);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(wildAnimalsArrayList,this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
@@ -86,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
     @Override
     public void onClick(WildAnimals wildAnimals) {
-
+        Log.d("TAG", "onClick: clicked");
     }
 }
 
