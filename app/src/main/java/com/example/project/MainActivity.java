@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Type type = new TypeToken<ArrayList<WildAnimals>>(){}.getType();
         ArrayList<WildAnimals> wildAnimalsArrayList = gson.fromJson(json, type);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(wildAnimalsArrayList,this);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, wildAnimalsArrayList,this);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
