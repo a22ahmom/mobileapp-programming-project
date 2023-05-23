@@ -23,7 +23,6 @@ public class AboutScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
-        TextView textView = findViewById(R.id.textview);
 
         webView = findViewById(R.id.webview);
         webView.setWebViewClient(new WebViewClient());
@@ -32,7 +31,6 @@ public class AboutScreen extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             String info = extras.getString("info");
-            textView.setText(info);
         }
 
         Button returnToMainPageButton = findViewById(R.id.returnToMainPage);
