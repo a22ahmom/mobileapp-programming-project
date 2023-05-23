@@ -32,7 +32,6 @@ public class WildAnimals {
         this.feet = feet;
     }
 
-
     public void setID(String id) {
         this.ID = id;
     }
@@ -60,6 +59,10 @@ public class WildAnimals {
     public Auxdata getAuxdata() {
         return auxdata;
     }
+
+    public String getLocation(){ return location; }
+
+    public String getCategory(){ return category; }
 
     @NonNull
     @Override
