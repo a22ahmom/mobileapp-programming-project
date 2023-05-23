@@ -15,14 +15,25 @@ import androidx.recyclerview.widget.RecyclerView;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private LayoutInflater layoutInflater;
+    private OnClickListener onClickListener;
     private ArrayList<WildAnimals> wildAnimalsArrayList;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView id_text, name_text;
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        private TextView name_text, location_text, category_text;
         public ViewHolder(View view) {
             super(view);
             name_text = (TextView) view.findViewById(R.id.nameText);
         }
+        @Override
+        public void onClick(View view) {
+
+        }
+    }
+
+    RecyclerViewAdapter(Context context, ArrayList<WildAnimals> wildAnimalsArrayList, OnClickListener onClickListener) {
+        this.layoutInflater = LayoutInflater.from(context);
+        this.wildAnimalsArrayList = wildAnimalsArrayList;
+        this.onClickListener = onClickListener;
     }
 
     public RecyclerViewAdapter(ArrayList<WildAnimals> wildAnimalsArrayList) {
@@ -46,5 +57,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return wildAnimalsArrayList.size();
+    }
+
+    public interface OnClickListener {
+        void onClick(WildAnimals wildAnimals);
     }
 }

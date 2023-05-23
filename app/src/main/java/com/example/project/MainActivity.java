@@ -22,7 +22,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener{
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener, RecyclerViewAdapter.OnClickListener {
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22ahmom";
     private final String JSON_FILE = "wildanimals.json";
@@ -81,6 +81,11 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         for(int i = 0; i < wildAnimalsArrayList.size(); i++) {
             Log.d("Mainactivity ==>", "Hittade ett vilt djur " + wildAnimalsArrayList.get(i).getName());
         }
+
+    }
+
+    @Override
+    public void onClick(WildAnimals wildAnimals) {
 
     }
 }
