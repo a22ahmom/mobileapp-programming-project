@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         wildAnimalsArrayList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
         Button aboutScreenButton = findViewById(R.id.aboutScreen);
+        TextView textView = (TextView) findViewById(R.id.textview);
         aboutScreenButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

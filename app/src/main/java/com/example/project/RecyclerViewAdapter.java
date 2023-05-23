@@ -40,6 +40,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.ViewHolder holder, int position) {
         String name = wildAnimalsArrayList.get(position).getName();
         holder.name_text.setText(name);
+
     }
 
     @Override
