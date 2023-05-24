@@ -22,7 +22,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener, RecyclerViewAdapter.OnClickListener {
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a22ahmom";
     private final String JSON_FILE = "wildanimals.json";
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         wildAnimalsArrayList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
         Button aboutScreenButton = findViewById(R.id.aboutScreen);
@@ -60,8 +61,8 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
         String s = readFile("wildanimals.json");
         Log.d("MainActivity","The following text was found in textfile:\n\n"+s);
-    }
 
+    }
     @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onPostExecute(String json) {
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Type type = new TypeToken<ArrayList<WildAnimals>>(){}.getType();
         ArrayList<WildAnimals> wildAnimalsArrayList = gson.fromJson(json, type);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, wildAnimalsArrayList,this);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, wildAnimalsArrayList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
@@ -81,11 +82,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             Log.d("Mainactivity ==>", "Hittade ett vilt djur " + wildAnimalsArrayList.get(i).getName());
         }
 
-    }
-
-    @Override
-    public void onClick(WildAnimals wildAnimals) {
-        Log.d("TAG", "onClick: clicked");
     }
 }
 

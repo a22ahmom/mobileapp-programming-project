@@ -16,20 +16,14 @@ public class WildAnimals {
     @SerializedName("cost")
     private int feet;
     private Auxdata auxdata;
-
     public WildAnimals(String name){
         this.name = name;
     }
 
-    public WildAnimals(String ID, String name, String type, String company, String location, String category, int meter, int feet){
-        this.ID = ID;
+    public WildAnimals(String name, String location, String category){
         this.name = name;
-        this. type = type;
-        this.company = company;
         this.location = location;
         this.category = category;
-        this.meter = meter;
-        this.feet = feet;
     }
 
     public void setID(String id) {

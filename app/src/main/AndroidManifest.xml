@@ -25,7 +25,6 @@
         <activity
             android:name=".AboutScreen"
             android:exported="false" />
-        <activity android:name=".ThirdActivity" />
     </application>
 
 </manifest>

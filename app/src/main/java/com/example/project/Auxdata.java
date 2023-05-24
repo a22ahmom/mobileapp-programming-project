@@ -1,7 +1,6 @@
 package com.example.project;
 
 public class Auxdata {
-
     private String wiki;
     private String img;
 
