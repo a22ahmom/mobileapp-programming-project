@@ -12,24 +12,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nameText"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="40sp" />
 
     <TextView
         android:id="@+id/idText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ID" />
+        android:text="ID"
+        android:textColor="@color/cardview_dark_background" />
 
     <TextView
         android:id="@+id/locationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="location" />
+        android:text="location"
+        android:textColor="@color/cardview_dark_background" />
 
     <TextView
         android:id="@+id/categoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="category" />
+        android:text="category"
+        android:textColor="@color/cardview_dark_background" />
 
 </LinearLayout>
